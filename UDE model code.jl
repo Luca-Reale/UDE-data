@@ -18,7 +18,7 @@ u0 = Float32[0]
 p_ = Float32[1, 1, 1, 1]
 prob = ODEProblem(data, u0, tspan, p_)
 solution = solve(prob, Vern7(), abstol=1e-12, reltol = 1e-12, saveat = 0.1)
-tsteps = range(0.0f0, 1.5f0, length = datasize)
+tsteps = range(0.0f0, 1.5f0, length = 31)
 
 scatter(solution, alpha = 0.25)
 plot!(solution, alpha = 0.5)
